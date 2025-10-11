@@ -1,0 +1,65 @@
+# Local question bank for OOD practice exercises
+# Keys: slug, title, difficulty, tags, prompt, checklist
+
+- slug: strategy-pattern-basics
+  title: Strategy Pattern Basics
+  difficulty: easy
+  tags: patterns,strategy,behavioral
+  prompt: |
+    Build a simple text formatter that supports different formatting strategies
+    (e.g., upper case, lower case, title case). The client selects a strategy
+    at runtime and the context delegates formatting to the chosen strategy.
+  checklist:
+    - Model interchangeable strategies via a common interface
+    - Avoid conditional logic inside the context for strategy choice
+    - Context should not know concrete strategy implementation details
+    - Unit test each strategy in isolation
+    - Verify context delegates correctly by swapping strategies at runtime
+
+- slug: observer-news-feed
+  title: Observer News Feed
+  difficulty: medium
+  tags: patterns,observer,behavioral
+  prompt: |
+    Implement a news feed where publishers broadcast articles and subscribers
+    receive updates when new items arrive. Support subscribing, unsubscribing,
+    and notifying observers. Consider push vs pull styles for updates.
+  checklist:
+    - Decouple subject from observers via an Observer interface
+    - Support dynamic subscribe and unsubscribe operations
+    - Ensure observer notifications do not crash the subject
+    - Consider order of notification and idempotency
+    - Include tests for multiple observers and edge cases (no observers)
+
+- slug: composite-file-system
+  title: Composite File System
+  difficulty: medium
+  tags: patterns,composite,structural
+  prompt: |
+    Model a tiny file system with files and folders. Folders can contain files
+    or other folders. Provide operations to compute total size and to print a
+    tree-like representation. Clients should treat leaves and composites
+    uniformly.
+  checklist:
+    - Define a common component interface for files and folders
+    - Implement leaves (files) and composites (folders)
+    - Operations should work recursively without type checks
+    - Avoid code duplication for size and printing behaviors
+    - Test nested structures and edge cases (empty folder)
+
+- slug: builder-report
+  title: Builder for Report Generation
+  difficulty: medium
+  tags: patterns,builder,creational
+  prompt: |
+    Create a report builder that assembles complex reports with optional sections
+    (cover, table of contents, body, appendix). Provide a Director that uses a
+    Builder interface to produce different report variants (e.g., concise vs.
+    detailed).
+  checklist:
+    - Define a Builder interface and concrete builders
+    - Director orchestrates build steps without knowing concrete details
+    - Support optional sections and ordering of steps
+    - Ensure the product is immutable or defensively copied
+    - Test multiple builder variants for correctness
+
