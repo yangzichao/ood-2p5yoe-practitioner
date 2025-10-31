@@ -1,36 +1,85 @@
-### Java + Gradle + IDEs + OS
+# ==============================
+# Gradle / Java .gitignore
+# Includes macOS and Windows OS files
+# ==============================
 
-# Build and Gradle
+# Gradle
 .gradle/
+**/.gradle/
 build/
 **/build/
-!gradle/wrapper/gradle-wrapper.jar
 gradle-app.setting
-.gradletasknamecache
 
-# Java
+# Keep Gradle Wrapper JAR tracked even with *.jar ignore
+!gradle/wrapper/gradle-wrapper.jar
+
+# Java / JVM
 *.class
 *.log
-hs_err_pid*
-replay_pid*
-
-# IDEs
-.idea/
-*.iml
-.project
-.classpath
-.settings/
-.vscode/
-out/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Archives
+*.ctxt
 *.jar
 *.war
 *.ear
+*.nar
 *.zip
 *.tar.gz
 *.rar
+*.hprof
+*.jfr
+hs_err_pid*
+replay_pid*.log
+
+# IDEs and editors
+
+# IntelliJ IDEA / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+bin/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS-specific files
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.apdisk
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Editor swap/backup files
+*~
+*.swp
+*.swo
+
